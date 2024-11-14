@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Boioioioing</title>
+</head>
+<body>
+    <img id="goober" src="https://static.wikia.nocookie.net/6b956b84-fd39-42f0-a705-47c933d23aa9" alt="Silly Little Goober" width="500" height="600">
+    <p id="score">0</p>
+    <p id="Arby">Arby's. we have da meets</p>  
+</body>
+</html>
+<script>
+document.getElementById("goober").addEventListener("click",up)
+var score = 0
+var increaseScore = 1
+function up(){
+  //Click on image = add 1 to score
+    score = score + 1
+    document.getElementById("score").innerText = score
+}
+function upgrade(){
+  //Click on image = add 2 to score
+  alert() 
+}
+document.getElementById("Arby").addEventListener("click",upgrade)
+
+</script>
