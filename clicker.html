@@ -8,22 +8,28 @@
 <body>
     <img id="goober" src="https://static.wikia.nocookie.net/6b956b84-fd39-42f0-a705-47c933d23aa9" alt="Silly Little Goober" width="500" height="600">
     <p id="score">0</p>
-    <p id="Arby">Arby's. we have da meets</p>  
+    <p id="Arby">Upgrade</p>  
 </body>
 </html>
 <script>
 document.getElementById("goober").addEventListener("click",up)
 var score = 0
-var increaseScore = 1
+var upgradeup = 1
 function up(){
   //Click on image = add 1 to score
-    score = score + 1
+    score = score + upgradeup
     document.getElementById("score").innerText = score
 }
 function upgrade(){
-  //Click on image = add 2 to score
-  alert() 
+  //if score>=5 increase upgradeup from 1 to 2 remove 5 from score
+  
+  if (score>=5){
+    upgradeup =  upgradeup +1 
+    score = score -5
+  }
+    document.getElementById("score").innerText = score
 }
 document.getElementById("Arby").addEventListener("click",upgrade)
+
 
 </script>

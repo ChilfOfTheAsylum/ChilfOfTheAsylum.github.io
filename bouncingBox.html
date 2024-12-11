@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            position: absolute;
+            top: 299px;
+            left: 100px;
+
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+
+</head>
+
+<body>
+    <div id="chicken"></div>
+</body>
+
+</html>
+<script>
+    var position = 100
+    var direction = 5
+    document.getElementById("chicken").addEventListener("click", move)
+
+    setInterval(move, 16)
+    function move() {
+        //increase position by 5px when clicked
+        document.getElementById("chicken").style.left = position + "px";
+        position = position + direction
+        //if position> 700 px change direction 
+        if (position > 700) {
+            direction = -5
+        }
+        if (position < 50){
+            direction = 5
+        }
+    }
+
+</script>
